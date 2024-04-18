@@ -1,1 +1,59 @@
-/*# sourceMappingURL=nursing.css.map */
+@import url("https://use.typekit.net/seh6wxs.css");
+* {
+  font-family: "sofia-pro", sans-serif;
+}
+
+.item {
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item .section-header {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(0, 51, 141);
+}
+.item.active .section-header,
+.item .section-header:hover {
+  color: rgb(136, 35, 69);
+}
+.item .section-content {
+  height: 0;
+  overflow: hidden;
+}
+.item .section-content p {
+  margin: 0;
+  padding: 1rem;
+}
+.item .table-container {
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-collapse: collapse;
+}
+.item .table-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.item .table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.item .table-container table, .item .table-container table th, .item .table-container table td {
+  border: 1px solid black;
+}
+.item .table-container table th, .item .table-container table td {
+  padding: 8px;
+  text-align: center;
+}
+.item .table-container table thead {
+  background-color: #a3a3a3;
+}/*# sourceMappingURL=nursing.css.map */

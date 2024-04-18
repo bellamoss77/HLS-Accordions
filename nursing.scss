@@ -1,0 +1,63 @@
+@import url("https://use.typekit.net/seh6wxs.css");
+
+$sofiaPro: "sofia-pro", sans-serif;
+
+* {
+    font-family: $sofiaPro;
+}
+
+.item {
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+
+    &:last-child {
+        border-bottom: none;
+    }
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: rgb(0, 51, 141)
+    }
+    &.active .section-header,
+    .section-header:hover {
+        color: rgb(136, 35, 69);
+    }
+    .section-content {
+        height: 0;
+        overflow: hidden;
+        p {
+            margin: 0;
+            padding: 1rem;
+        }
+    }
+    .table-container {
+        width: 60%;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-collapse: collapse;
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            &, th, td {
+                border: 1px solid black;
+            }
+            th, td {
+                padding: 8px;
+                text-align: center;
+            }
+            thead {
+                background-color: #a3a3a3;
+            }
+        }
+    }
+}
