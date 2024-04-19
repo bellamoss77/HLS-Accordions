@@ -89,15 +89,13 @@ const adjustParentHeight = (subItem, isSubOpening) => {
     const parentContent = subItem.closest('.section-content');
     if (!parentContent) return;
 
-    let newHeight = 0;
-    if (isSubOpening) {
-        const subContent = subItem.querySelector('.sub-content');
-        gsap.set(subContent, { height: 'auto' });
-        newHeight = parentContent.scrollHeight + subContent.scrollHeight;
-        gsap.set(subContent, { height: 0 });
-    } else {
-        newHeight = parentContent.scrollHeight;
-    }
+    const subContentHeight = subItem.querySelector('.sub-content').scrollHeight;
+    let newHeight = isSubOpening
+        ? parentContent.scrollHeight + subContentHeight
+        : parentContent.scrollHeight - subContentHeight;
+
+        newHeight = Math.max(newHeight, 0);
+    
     gsap.to(parentContent, {
         height: newHeight,
         duration: 0.5,
