@@ -29,14 +29,16 @@ $sofiaPro: "sofia-pro", sans-serif;
     .section-content {
         height: 0;
         overflow: hidden;
+        width: 80%;
+        margin-left: 25px;
         p {
             margin: 0;
             padding: 1rem;
         }
     }
     .table-container {
-        width: 60%;
-        max-width: 600px;
+        width: 50%;
+        max-width: 400px;
         margin: 0 auto;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
@@ -52,7 +54,7 @@ $sofiaPro: "sofia-pro", sans-serif;
                 border: 1px solid black;
             }
             th, td {
-                padding: 8px;
+                padding: 5px;
                 text-align: center;
             }
             thead {
@@ -60,4 +62,42 @@ $sofiaPro: "sofia-pro", sans-serif;
             }
         }
     }
+    .sub-item {
+        cursor: pointer;
+        width: 75%;
+        margin-left: 25px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .sub-title {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: rgb(0, 51, 141);
+    }
+    &.active .sub-title,
+    .sub-title:hover {
+        cursor: pointer;
+    }
+    .sub-content {
+        height: 0;
+        text-align: start;
+        margin: auto;
+        overflow: hidden;
+        p {
+            margin: 0;
+            padding: 1rem;
+        }
+        &:last-child {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+p {
+    margin: 25px auto;
 }
