@@ -8,7 +8,6 @@ $sofiaPro: "sofia-pro", sans-serif;
 
 .item {
     border-bottom: 1px solid #555;
-    cursor: pointer;
 
     &:last-child {
         border-bottom: none;
@@ -20,7 +19,9 @@ $sofiaPro: "sofia-pro", sans-serif;
         padding: 1rem;
         font-size: 1.25rem;
         font-weight: 600;
-        color: rgb(0, 51, 141)
+        color: rgb(0, 51, 141);
+        cursor: pointer;
+
     }
     &.active .section-header,
     .section-header:hover {
@@ -63,7 +64,6 @@ $sofiaPro: "sofia-pro", sans-serif;
         }
     }
     .sub-item {
-        cursor: pointer;
         width: 75%;
         margin-left: 25px;
 
@@ -72,6 +72,7 @@ $sofiaPro: "sofia-pro", sans-serif;
         }
     }
     .sub-title {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         width: 30%;
